@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.3.0"
+  required_version = ">= 1.7.0"
   cloud {
     organization = "cklewar"
     hostname     = "app.terraform.io"
@@ -10,18 +10,21 @@ terraform {
   }
 
   required_providers {
-    restapi = {
-      source  = "Mastercard/restapi"
-      version = ">= 1.18.0"
+    restful = {
+      source  = "magodo/restful"
+      version = ">= 0.16.1"
     }
+
     volterra = {
       source  = "volterraedge/volterra"
-      version = "= 0.11.30"
+      version = "= 0.11.37"
     }
+
     aws = {
       source  = "hashicorp/aws"
       version = ">= 4.51.0"
     }
+
     local = ">= 2.2.3"
     null  = ">= 3.1.1"
   }
